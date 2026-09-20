@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="0.55" stop-color="#5b8cff"/>
+      <stop offset="1" stop-color="#39d6c8"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef1ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#g)"/>
+  <!-- 桌面 -->
+  <rect x="96" y="352" width="320" height="26" rx="13" fill="url(#b)" opacity="0.95"/>
+  <rect x="128" y="378" width="22" height="58" rx="11" fill="#ffffff" opacity="0.85"/>
+  <rect x="362" y="378" width="22" height="58" rx="11" fill="#ffffff" opacity="0.85"/>
+  <!-- 打开的书 -->
+  <path d="M256 168 C218 140 160 138 120 158 L120 318 C160 298 218 300 256 328 C294 300 352 298 392 318 L392 158 C352 138 294 140 256 168 Z" fill="#ffffff"/>
+  <path d="M256 168 L256 328" stroke="#c7cdf5" stroke-width="6"/>
+  <path d="M150 196 C176 188 206 190 232 204 L232 286 C206 274 176 272 150 280 Z" fill="#dfe5ff"/>
+  <path d="M362 196 C336 188 306 190 280 204 L280 286 C306 274 336 272 362 280 Z" fill="#dfe5ff"/>
+  <!-- 光晕 -->
+  <circle cx="256" cy="120" r="34" fill="#fff8d8" opacity="0.9"/>
+  <circle cx="256" cy="120" r="58" fill="#fff8d8" opacity="0.18"/>
+</svg>
