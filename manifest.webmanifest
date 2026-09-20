@@ -1,0 +1,16 @@
+{
+  "name": "书桌 · 运营资质刷题",
+  "short_name": "书桌",
+  "description": "运营岗位资质题库：顺序/组卷/部门/遗忘曲线/循环/闪卡/游戏/彩蛋刷题",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0b12",
+  "theme_color": "#0b0b12",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
