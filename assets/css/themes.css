@@ -1,0 +1,150 @@
+/* ============================================================
+   书桌 · themes.css — 皮肤 flag 特殊工艺
+   变量由 JS 注入；这里只做结构性的风格化处理
+   ============================================================ */
+
+/* ---------- 点阵像素：GBA / 星露谷 / 8-bit ---------- */
+body.flag-pixel { --r-s: 3px; --r-m: 4px; --r-l: 5px; --r-xl: 6px; --glass-blur: 0px; --font-main: "Courier New", ui-monospace, monospace; }
+body.flag-pixel .card,
+body.flag-pixel .opt,
+body.flag-pixel .btn,
+body.flag-pixel .sheet,
+body.flag-pixel .mode-tile { border-radius: var(--r-m); }
+body.flag-pixel .card,
+body.flag-pixel .mode-tile,
+body.flag-pixel .opt,
+body.flag-pixel .judge-btn,
+body.flag-pixel .skin-card {
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--text) 18%, transparent);
+  border-width: 2px;
+}
+body.flag-pixel .btn:active,
+body.flag-pixel .mode-tile:active,
+body.flag-pixel .opt:active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--text) 18%, transparent); }
+body.flag-pixel .letter,
+body.flag-pixel .badge { border-radius: 2px; }
+body.flag-pixel .topbar,
+body.flag-pixel .tabbar,
+body.flag-pixel .sidebar { backdrop-filter: none; -webkit-backdrop-filter: none; }
+body.flag-pixel::before {
+  content: ""; position: fixed; inset: 0; z-index: 70; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,.13) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+}
+
+/* GBA 外壳感更强一点 */
+body.skin-gba::after {
+  content: ""; position: fixed; inset: 0; z-index: 69; pointer-events: none;
+  box-shadow: inset 0 0 140px rgba(0,0,0,.35);
+}
+
+/* ---------- 赛博朋克：霓虹光污染 ---------- */
+body.flag-neon { --glass-blur: 14px; }
+body.flag-neon .card,
+body.flag-neon .mode-tile,
+body.flag-neon .opt {
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent),
+             0 0 22px color-mix(in srgb, var(--accent) 20%, transparent),
+             inset 0 0 22px color-mix(in srgb, var(--accent) 6%, transparent);
+}
+body.flag-neon .q-text { text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 45%, transparent); }
+body.flag-neon .btn-primary { box-shadow: 0 0 14px var(--accent), 0 0 34px color-mix(in srgb, var(--accent) 55%, transparent); }
+body.flag-neon .side-item.active,
+body.flag-neon .chip.on { box-shadow: 0 0 16px var(--accent); }
+body.flag-neon .ac-cell.current,
+body.flag-neon .mine-cell.current { outline-color: var(--accent-2); }
+body.flag-neon::before {
+  content: ""; position: fixed; inset: 0; z-index: 70; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 4px);
+}
+
+/* ---------- 液态玻璃：iOS27 ---------- */
+body.flag-glass .card {
+  background: color-mix(in srgb, var(--surface) 58%, transparent);
+  backdrop-filter: blur(28px) saturate(1.9);
+  -webkit-backdrop-filter: blur(28px) saturate(1.9);
+  border: 1px solid rgba(255,255,255,.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), var(--sh-2);
+}
+body.flag-glass .opt {
+  background: color-mix(in srgb, var(--surface) 50%, transparent);
+  backdrop-filter: blur(14px) saturate(1.6);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+}
+body.flag-glass .btn-primary {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 10px 30px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* ---------- 新海诚漫画 ---------- */
+body.flag-comic { --r-m: 18px; --r-l: 26px; }
+body.flag-comic .card,
+body.flag-comic .opt,
+body.flag-comic .mode-tile { border-width: 2px; border-color: color-mix(in srgb, var(--text) 70%, transparent); }
+body.flag-comic .q-text { letter-spacing: .01em; }
+body.flag-comic .opt.selected { box-shadow: 4px 4px 0 color-mix(in srgb, var(--accent) 60%, transparent); }
+body.flag-comic .badge { border: 1.5px solid currentColor; }
+body.flag-comic::before {
+  content: ""; position: fixed; inset: 0; z-index: 70; pointer-events: none; opacity: .5;
+  background-image: radial-gradient(color-mix(in srgb, var(--text) 22%, transparent) 1px, transparent 1.4px);
+  background-size: 14px 14px;
+  mix-blend-mode: multiply;
+}
+
+/* ---------- 水墨 ---------- */
+body.flag-ink { --font-main: "Kaiti SC", "STKaiti", "KaiTi", "楷体", serif; }
+body.flag-ink .card {
+  border: 1px solid color-mix(in srgb, var(--text) 22%, transparent);
+  box-shadow: 2px 3px 14px rgba(0,0,0,.08);
+}
+body.flag-ink .opt:hover { border-color: color-mix(in srgb, var(--text) 55%, transparent); }
+body.flag-ink .opt.selected { border-color: var(--text); }
+body.flag-ink .opt.selected .letter { background: var(--text); }
+body.flag-ink .btn-primary { background: var(--text); box-shadow: none; }
+body.flag-ink .badge { border: 1px solid currentColor; background: transparent; }
+
+/* ---------- 终端 / 黑客帝国 ---------- */
+body.flag-terminal { --font-main: ui-monospace, "SF Mono", Menlo, Consolas, monospace; --r-s: 4px; --r-m: 6px; --r-l: 8px; }
+body.flag-terminal .card,
+body.flag-terminal .opt,
+body.flag-terminal .btn,
+body.flag-terminal .mode-tile { border-radius: 6px; }
+body.flag-terminal::before {
+  content: ""; position: fixed; inset: 0; z-index: 70; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,.18) 0 1px, transparent 1px 3px);
+}
+body.flag-terminal .q-text { letter-spacing: .02em; }
+body.flag-terminal .btn-primary { box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 55%, transparent); }
+
+/* ---------- 奢华黑金 / 杂志 ---------- */
+body.flag-luxe { --font-display: Georgia, "Times New Roman", "Songti SC", serif; }
+body.flag-luxe h1, body.flag-luxe h2, body.flag-luxe h3 { letter-spacing: .01em; }
+body.flag-luxe .card { border-color: color-mix(in srgb, var(--accent) 30%, transparent); }
+body.flag-luxe .btn { border-radius: var(--r-s); }
+
+/* ---------- 古籍纸张 ---------- */
+body.flag-paper { --font-main: "Songti SC", "STSong", "SimSun", serif; }
+body.flag-paper .card { border: 1px solid color-mix(in srgb, var(--text) 18%, transparent); box-shadow: 0 2px 10px rgba(60,40,10,.1); }
+body.flag-paper::before {
+  content: ""; position: fixed; inset: 0; z-index: 70; pointer-events: none; opacity: .35;
+  background-image: radial-gradient(rgba(90,60,20,.16) 1px, transparent 1.6px);
+  background-size: 18px 18px;
+  mix-blend-mode: multiply;
+}
+
+/* ---------- 孟菲斯 / 酸性 ---------- */
+body.flag-memphis .mode-tile { border-width: 2px; border-color: var(--text); }
+body.flag-memphis .card { border: 2px solid var(--text); }
+
+/* ---------- 节日 ---------- */
+body.flag-festive .btn-primary { box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 45%, transparent); }
+body.flag-festive .card { border-color: color-mix(in srgb, var(--accent) 28%, transparent); }
+
+/* ---------- 极光（背景由粒子系统画大弧光） ---------- */
+body.flag-aurora .glass,
+body.flag-aurora .sidebar,
+body.flag-aurora .tabbar,
+body.flag-aurora .topbar { background: color-mix(in srgb, var(--surface) 50%, transparent); }
+
+/* 皮肤切换时的全局过渡 */
+body, .card, .opt, .btn, .mode-tile, .badge, .chip { transition-property: background, color, border-color, box-shadow; transition-duration: .45s; transition-timing-function: var(--ease); }
